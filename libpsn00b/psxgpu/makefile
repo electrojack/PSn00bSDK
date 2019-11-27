@@ -30,7 +30,7 @@ build/%.o: %.c
 	
 build/%.o: %.s
 	@mkdir -p $(dir $@)
-	$(CC) $(AFLAGS) $(INCLUDE) -c $< -o $@
+	$(AS) $(AFLAGS) $(INCLUDE) $< -o $@
 
 clean:
 	rm -Rf build $(TARGET)
